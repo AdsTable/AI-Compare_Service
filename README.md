@@ -1,5 +1,5 @@
-#Как использовать:
-###  Для парсинга поставщиков услуг:
+#Как использовать AI-Compare_Service:
+###  AI-Compare_Service предназначен для парсинга поставщиков услуг:
 
 # config.py
 BASE_URL = "https://www.example-el-service.com"
