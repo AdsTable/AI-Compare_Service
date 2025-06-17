@@ -2,6 +2,8 @@
 ###  AI-Compare_Service предназначен для парсинга поставщиков услуг:
 
 # config.py
+###  Для парсинга поставщиков электроэнергии:
+
 BASE_URL = "https://www.example-el-service.com"
 CSS_SELECTOR = ".provider-card"
 SCRAPER_INSTRUCTIONS = "Extract electricity providers: name, price per kWh, monthly fee, contract duration, bonuses, website, phone"
@@ -28,7 +30,7 @@ python main.py --model mobile_service_provider
 python main.py --model business
 
 ## Ключевые дополнения:
-# Полноценный инструмент для диагностики структуры сайтов с интеллектуальным анализом паттернов
+## Полноценный инструмент для диагностики структуры сайтов с интеллектуальным анализом паттернов
 
 # several_site_analyzer.py
 Утилита представляет собой полноценный инструмент для диагностики структуры сайтов с интеллектуальным анализом паттернов, рекомендациями по оптимизации парсинга и гибкими опциями экспорта данных.
@@ -62,29 +64,29 @@ Graceful handling прерывания (Ctrl+C)
 Детальное логирование критических ошибок
 Статистика успешности выполнения
 
-## Практические возможности:
+# Практические возможности:
 # Запуск базового анализа:
 
 python single_site_analyzer.py
 
-# Добавление своего сайта:
+## Добавление своего сайта:
 python single_site_analyzer.py --url "mysite" "https://adstable.com"
 
-# Минимальный вывод:
+## Минимальный вывод:
 python single_site_analyzer.py --silent --export results.json
 
-# Расширееный анализ нескольких сайтов
+## Расширееный анализ нескольких сайтов
 python several_site_analyzer.py
 
 # Полный парсинг всех операторов
 python unified_parser.py
 
-# Анализ структуры конкретного оператора
+## Анализ структуры конкретного оператора
 python unified_parser.py --operator telia --analyze-only
 
-# Парсинг с сохранением в custom файл
+## Парсинг с сохранением в custom файл
 python unified_parser.py --output my_results.json
 
-# Тихий режим для автоматизации
+## Тихий режим для автоматизации
 python unified_parser.py --silent
 
