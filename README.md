@@ -8,14 +8,12 @@ SCRAPER_INSTRUCTIONS = "Extract electricity providers: name, price per kWh, mont
 
 ###  Для парсинга мобильных операторов:
 
-# config.py
 BASE_URL = "https://www.example-mobile-service.com"
 CSS_SELECTOR = ".plan-card"
 SCRAPER_INSTRUCTIONS = "Extract mobile providers: name, data limit (GB), price per month, contract duration, bonuses, website, phone, call/SMS details"
 
 ###  Для парсинга банковских услуг:
 
-# config.py
 BASE_URL = "https://www.example-finans-service.com"
 CSS_SELECTOR = ".loan-offer"
 SCRAPER_INSTRUCTIONS = "Extract bank loan offers: bank name, interest rate, loan term, monthly fee, website, phone"
