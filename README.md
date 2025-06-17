@@ -1,34 +1,30 @@
 #Как использовать:
-###  Для парсинга энергетических компаний:
+###  Для парсинга поставщиков услуг:
 
-#***** code *****
 # config.py
-BASE_URL = "https://www.energipris.no/oslo?page={page_number}"
+BASE_URL = "https://www.example-el-service.com"
 CSS_SELECTOR = ".provider-card"
 SCRAPER_INSTRUCTIONS = "Extract electricity providers: name, price per kWh, monthly fee, contract duration, bonuses, website, phone"
 
 ###  Для парсинга мобильных операторов:
 
-#***** code *****
 # config.py
-BASE_URL = "https://www.mobilabonnement.no/abonnement?page={page_number}"
+BASE_URL = "https://www.example-mobile-service.com"
 CSS_SELECTOR = ".plan-card"
 SCRAPER_INSTRUCTIONS = "Extract mobile providers: name, data limit (GB), price per month, contract duration, bonuses, website, phone, call/SMS details"
 
 ###  Для парсинга банковских услуг:
 
-#***** code *****
 # config.py
-BASE_URL = "https://www.finansportalen.no/lan?page={page_number}"
+BASE_URL = "https://www.example-finans-service.com"
 CSS_SELECTOR = ".loan-offer"
 SCRAPER_INSTRUCTIONS = "Extract bank loan offers: bank name, interest rate, loan term, monthly fee, website, phone"
 
-### Система автоматически определит тип сервиса по URL и адаптирует парсинг. Для запуска:
-#***** code ***** main.py
+### Система автоматически определит тип сервиса по URL и адаптирует парсинг. Для запуска: main.py
 python main.py
 
-## Для сервис-провайдеров
-python main.py --model service_provider
+## Для mobile-service
+python main.py --model mobile_service_provider
 
 ## Для бизнес-справочника
 python main.py --model business
@@ -36,7 +32,7 @@ python main.py --model business
 ## Ключевые дополнения:
 # Полноценный инструмент для диагностики структуры сайтов с интеллектуальным анализом паттернов
 
-# analyzer.py
+# several_site_analyzer.py
 Утилита представляет собой полноценный инструмент для диагностики структуры сайтов с интеллектуальным анализом паттернов, рекомендациями по оптимизации парсинга и гибкими опциями экспорта данных.
 # 1. Система рекомендаций (print_recommendations)
 
@@ -74,7 +70,7 @@ Graceful handling прерывания (Ctrl+C)
 python single_site_analyzer.py
 
 # Добавление своего сайта:
-python analyzer.py --url "mysite" "https://adstable.com"
+python single_site_analyzer.py --url "mysite" "https://adstable.com"
 
 # Минимальный вывод:
 python single_site_analyzer.py --silent --export results.json
